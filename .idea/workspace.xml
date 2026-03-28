@@ -4,309 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/data/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/db/UserDataService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/resources/UserResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/PasswordData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/RegisterData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/data/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/db/UserDataService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$ChangeRoleInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$ModifyInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RegisterRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestChangeRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestDelete.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestEmpty.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestLogout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestModify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestPasswordData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestShowRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$UserAttributes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$UsernameInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/AuthToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/LoginData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/PasswordData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/RegisterData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Request.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$ErrorCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$SessionList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$SuccessMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$UserList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$UserRoleData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/UserRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/animal-sniffer-annotations-1.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/annotations-4.1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/aopalliance-repackaged-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/api-common-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/appengine-api-1.0-sdk-2.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/auto-value-1.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/auto-value-annotations-1.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/checker-qual-3.30.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/commons-codec-1.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/conscrypt-openjdk-uber-2.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/datastore-v1-proto-client-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/error_prone_annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/failureaccess-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/gax-2.23.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/gax-grpc-2.23.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/gax-httpjson-0.108.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-api-client-2.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-auth-library-credentials-1.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-auth-library-oauth2-http-1.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-cloud-core-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-cloud-core-http-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-cloud-datastore-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-cloud-tasks-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-apache-v2-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-appengine-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-gson-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-jackson2-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-http-client-protobuf-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/google-oauth-client-1.34.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-alts-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-api-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-auth-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-context-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-core-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-google-cloud-datastore-admin-v1-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-googleapis-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-grpclb-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-netty-shaded-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-protobuf-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-protobuf-lite-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-services-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-stub-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/grpc-xds-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/guava-31.1-jre.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/hk2-api-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/hk2-locator-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/hk2-utils-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/httpclient-4.5.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/httpcore-4.4.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/j2objc-annotations-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jackson-annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jackson-core-2.14.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jackson-databind-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jackson-module-jakarta-xmlbind-annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.activation-api-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.inject-api-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.validation-api-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jakarta.xml.bind-api-4.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/java-jwt-4.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/javassist-3.30.2-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-client-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-common-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-container-servlet-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-container-servlet-core-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-entity-filtering-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-hk2-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-media-json-jackson-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jersey-server-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/jsr305-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/opencensus-api-0.31.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/opencensus-contrib-http-util-0.31.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/opencensus-proto-0.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/perfmark-api-0.26.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-cloud-datastore-admin-v1-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-cloud-datastore-v1-0.104.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-cloud-tasks-v2-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-cloud-tasks-v2beta2-0.101.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-cloud-tasks-v2beta3-0.101.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-common-protos-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/proto-google-iam-v1-1.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/protobuf-java-3.21.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/protobuf-java-util-3.21.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/re2j-1.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/lib/threetenbp-1.6.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/.gcloudignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/appengine-generated/app.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/data/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/db/UserDataService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$ChangeRoleInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$LoginRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$ModifyInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RegisterRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestChangeRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestDelete.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestEmpty.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestLogout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestModify.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestPasswordData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$RequestShowRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$UserAttributes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource$UsernameInput.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/resources/UserResource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/AuthToken.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/LoginData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/PasswordData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/RegisterData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Request.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$ErrorCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$Message.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$SessionList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$SuccessMessage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$UserList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result$UserRoleData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/classes/pt/unl/fct/di/adc/firstwebapp/util/UserRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/animal-sniffer-annotations-1.22.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/annotations-4.1.1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/aopalliance-repackaged-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/api-common-2.6.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/appengine-api-1.0-sdk-2.0.33.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/auto-value-1.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/auto-value-annotations-1.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/checker-qual-3.30.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/commons-codec-1.15.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/commons-logging-1.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/conscrypt-openjdk-uber-2.5.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/datastore-v1-proto-client-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/error_prone_annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/failureaccess-1.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/gax-2.23.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/gax-grpc-2.23.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/gax-httpjson-0.108.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-api-client-2.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-auth-library-credentials-1.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-auth-library-oauth2-http-1.16.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-cloud-core-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-cloud-core-http-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-cloud-datastore-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-cloud-tasks-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-apache-v2-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-appengine-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-gson-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-jackson2-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-http-client-protobuf-1.42.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/google-oauth-client-1.34.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-alts-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-api-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-auth-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-context-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-core-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-google-cloud-datastore-admin-v1-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-googleapis-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-grpclb-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-netty-shaded-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-protobuf-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-protobuf-lite-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-services-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-stub-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/grpc-xds-1.53.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/gson-2.10.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/guava-31.1-jre.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/hk2-api-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/hk2-locator-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/hk2-utils-3.0.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/httpclient-4.5.14.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/httpcore-4.4.16.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/j2objc-annotations-1.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jackson-annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jackson-core-2.14.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jackson-databind-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jackson-module-jakarta-xmlbind-annotations-2.18.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.activation-api-2.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.annotation-api-2.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.inject-api-2.0.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.validation-api-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.ws.rs-api-3.1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jakarta.xml.bind-api-4.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/java-jwt-4.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/javassist-3.30.2-GA.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/javax.annotation-api-1.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-client-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-common-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-container-servlet-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-container-servlet-core-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-entity-filtering-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-hk2-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-media-json-jackson-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jersey-server-3.1.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/jsr305-3.0.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/opencensus-api-0.31.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/opencensus-contrib-http-util-0.31.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/opencensus-proto-0.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/osgi-resource-locator-1.0.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/perfmark-api-0.26.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-cloud-datastore-admin-v1-2.13.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-cloud-datastore-v1-0.104.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-cloud-tasks-v2-2.11.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-cloud-tasks-v2beta2-0.101.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-cloud-tasks-v2beta3-0.101.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-common-protos-2.14.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/proto-google-iam-v1-1.9.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/protobuf-java-3.21.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/protobuf-java-util-3.21.12.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/re2j-1.6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/lib/threetenbp-1.6.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/logging.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/min-quickstart-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/quickstart-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/__static__/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/__static__/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/__static__/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/__static__/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/app.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/appengine-staging/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/resources/ComputationResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/resources/LoginResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/AuthToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/AuthToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pt/unl/fct/di/adc/firstwebapp/util/LoginData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/error/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/error/500.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/cat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/jedi.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="first push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -332,12 +31,12 @@
     &quot;assignee&quot;: &quot;HugoMS655&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/fpb/adc-pei-2526-storage.git&quot;,
-    &quot;accountId&quot;: &quot;bbebe984-835f-4508-af28-a9e962bf5917&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HugoMS655/Projeto-ADC-Hugo-Santos-61546.git",
+    "accountId": "bbebe984-835f-4508-af28-a9e962bf5917"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -452,8 +151,17 @@
       <workItem from="1774610091175" duration="2977000" />
       <workItem from="1774613117344" duration="3258000" />
       <workItem from="1774617993746" duration="197000" />
-      <workItem from="1774709843192" duration="2464000" />
+      <workItem from="1774709843192" duration="3698000" />
     </task>
+    <task id="LOCAL-00001" summary="first push">
+      <option name="closed" value="true" />
+      <created>1774713067029</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774713067029</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,6 +177,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first push" />
+    <option name="LAST_COMMIT_MESSAGE" value="first push" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
