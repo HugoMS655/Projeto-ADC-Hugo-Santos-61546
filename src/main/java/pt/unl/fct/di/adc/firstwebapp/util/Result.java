@@ -40,7 +40,6 @@ public class Result<T> {
         public UserRoleData(String u, String r) { this.username = u; this.role = r; }
     }
 
-    // --- ENUMS ---
 
     public enum ErrorCode {
         INVALID_CREDENTIALS("9900", "The username-password pair is not valid"),
