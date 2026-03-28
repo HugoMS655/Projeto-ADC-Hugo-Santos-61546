@@ -148,7 +148,6 @@ public class UserResource {
     }
 
     // --- Op5: Modify Account ---
-    // --- Op5: Modify Account (Atualizado com validação de campos) ---
     @POST
     @Path("/modaccount")
     public Response doModifyAccount(String jsonRaw) {

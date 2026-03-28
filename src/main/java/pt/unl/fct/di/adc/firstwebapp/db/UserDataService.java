@@ -17,27 +17,14 @@ public class UserDataService {
 
     public UserDataService() { }
 
-    public void storeUser(User user) {
-        Key userKey = userKeyFactory.newKey(user.getUsername());
-        String pwdToStore = user.getPassword();
-        if (pwdToStore != null && pwdToStore.length() != 128) {
-            pwdToStore = DigestUtils.sha512Hex(pwdToStore);
-        }
-        Entity userEntity = Entity.newBuilder(userKey)
-                .set("password", pwdToStore)
-                .set("role", user.getRole())
-                .set("phone", user.getPhone() != null ? user.getPhone() : "")
-                .set("address", user.getAddress() != null ? user.getAddress() : "")
-                .set("creationTime", user.getCreationTime())
-                .build();
-        datastore.put(userEntity);
-    }
+    // --- LEITURAS (Não precisam de transação explícita na maioria dos casos) ---
 
     public User getUser(String username) {
         if(username == null) return null;
         Key userKey = userKeyFactory.newKey(username);
         Entity entity = datastore.get(userKey);
         if(entity == null) return null;
+
         User user = new User();
         user.setUsername(username);
         user.setPassword(entity.contains("password") ? entity.getString("password") : "");
@@ -62,82 +49,91 @@ public class UserDataService {
         return users;
     }
 
-    public void deleteUser(String username) {
-        if (username != null) {
-            datastore.delete(userKeyFactory.newKey(username));
-        }
-    }
+    // --- ESCRITAS SIMPLES ---
 
-    public void removeAllUserTokens(String username) {
-        Query<Entity> query = Query.newEntityQueryBuilder()
-                .setKind("Token")
-                .setFilter(StructuredQuery.PropertyFilter.eq("username", username))
+    public void storeUser(User user) {
+        Key userKey = userKeyFactory.newKey(user.getUsername());
+        String pwdToStore = user.getPassword();
+        // Proteção SHA-512
+        if (pwdToStore != null && pwdToStore.length() != 128) {
+            pwdToStore = DigestUtils.sha512Hex(pwdToStore);
+        }
+        Entity userEntity = Entity.newBuilder(userKey)
+                .set("password", pwdToStore)
+                .set("role", user.getRole())
+                .set("phone", user.getPhone() != null ? user.getPhone() : "")
+                .set("address", user.getAddress() != null ? user.getAddress() : "")
+                .set("creationTime", user.getCreationTime())
                 .build();
-        QueryResults<Entity> results = datastore.run(query);
-        List<Key> keysToDelete = new ArrayList<>();
-        while (results.hasNext()) {
-            keysToDelete.add(results.next().getKey());
-        }
-        if (!keysToDelete.isEmpty()) {
-            datastore.delete(keysToDelete.toArray(new Key[0]));
-        }
+        datastore.put(userEntity);
     }
 
-    // ---  ATUALIZAR ROLE NOS TOKENS ---
-    public void updateAllUserTokensRole(String username, String newRole) {
-        Query<Entity> query = Query.newEntityQueryBuilder()
-                .setKind("Token")
-                .setFilter(StructuredQuery.PropertyFilter.eq("username", username))
-                .build();
-        QueryResults<Entity> results = datastore.run(query);
-        List<Entity> updatedTokens = new ArrayList<>();
-        while (results.hasNext()) {
-            updatedTokens.add(Entity.newBuilder(results.next()).set("role", newRole).build());
-        }
-        if (!updatedTokens.isEmpty()) {
-            datastore.put(updatedTokens.toArray(new Entity[0]));
-        }
-    }
-
-    public void updateUserAttributes(String username, UserResource.UserAttributes attrs) {
-        User user = getUser(username);
-        if (user == null || attrs == null) return;
-        boolean changed = false;
-        // Só marca como 'changed' se o novo telefone for diferente do atual
-        if (attrs.getPhone() != null && !attrs.getPhone().trim().isEmpty()) {
-            if (!attrs.getPhone().equals(user.getPhone())) {
-                user.setPhone(attrs.getPhone());
-                changed = true;
-            }
-        }
-        // Só marca como 'changed' se a nova morada for diferente da atual
-        if (attrs.getAddress() != null && !attrs.getAddress().trim().isEmpty()) {
-            if (!attrs.getAddress().equals(user.getAddress())) {
-                user.setAddress(attrs.getAddress());
-                changed = true;
-            }
-        }
-        // Só toca na base de dados se algo mudou de facto
-        if (changed) {
-            storeUser(user);
-        }
-    }
+    // --- ESCRITAS COM TRANSAÇÃO (Segurança Máxima) ---
 
     public void updateRole(String username, String newRole) {
-        User user = getUser(username);
-        if(user != null && newRole != null) {
-            user.setRole(newRole);
-            storeUser(user);
+        Transaction txn = datastore.newTransaction();
+        try {
+            Key userKey = userKeyFactory.newKey(username);
+            Entity userEntity = txn.get(userKey);
+            if (userEntity != null && newRole != null) {
+                txn.put(Entity.newBuilder(userEntity).set("role", newRole).build());
+                txn.commit();
+            }
+        } finally {
+            if (txn.isActive()) txn.rollback();
         }
     }
 
     public void updatePassword(String username, String newPassword) {
-        User user = getUser(username);
-        if(user != null && newPassword != null) {
-            user.setPassword(newPassword);
-            storeUser(user);
+        Transaction txn = datastore.newTransaction();
+        try {
+            Key userKey = userKeyFactory.newKey(username);
+            Entity userEntity = txn.get(userKey);
+            if (userEntity != null && newPassword != null) {
+                String pwdToStore = newPassword;
+                if (pwdToStore.length() != 128) pwdToStore = DigestUtils.sha512Hex(pwdToStore);
+
+                txn.put(Entity.newBuilder(userEntity).set("password", pwdToStore).build());
+                txn.commit();
+            }
+        } finally {
+            if (txn.isActive()) txn.rollback();
         }
     }
+
+    public void updateUserAttributes(String username, UserResource.UserAttributes attrs) {
+        Transaction txn = datastore.newTransaction();
+        try {
+            Key userKey = userKeyFactory.newKey(username);
+            Entity userEntity = txn.get(userKey);
+            if (userEntity == null || attrs == null) return;
+
+            boolean changed = false;
+            Entity.Builder builder = Entity.newBuilder(userEntity);
+
+            if (attrs.getPhone() != null && !attrs.getPhone().trim().isEmpty()) {
+                if (!attrs.getPhone().equals(userEntity.getString("phone"))) {
+                    builder.set("phone", attrs.getPhone());
+                    changed = true;
+                }
+            }
+            if (attrs.getAddress() != null && !attrs.getAddress().trim().isEmpty()) {
+                if (!attrs.getAddress().equals(userEntity.getString("address"))) {
+                    builder.set("address", attrs.getAddress());
+                    changed = true;
+                }
+            }
+
+            if (changed) {
+                txn.put(builder.build());
+                txn.commit();
+            }
+        } finally {
+            if (txn.isActive()) txn.rollback();
+        }
+    }
+
+    // --- GESTÃO DE TOKENS ---
 
     public void storeToken(AuthToken token) {
         Key tokenKey = tokenKeyFactory.newKey(token.getTokenId());
@@ -155,11 +151,13 @@ public class UserDataService {
         Key tokenKey = tokenKeyFactory.newKey(tokenId);
         Entity entity = datastore.get(tokenKey);
         if (entity == null) return null;
+
         long expiresAt = entity.getLong("expiresAt");
         if ((System.currentTimeMillis() / 1000) > expiresAt) {
             datastore.delete(tokenKey);
             return null;
         }
+
         AuthToken token = new AuthToken();
         token.setTokenId(tokenId);
         token.setUsername(entity.getString("username"));
@@ -167,6 +165,42 @@ public class UserDataService {
         token.setExpiresAt(expiresAt);
         if (entity.contains("issuedAt")) token.setIssuedAt(entity.getLong("issuedAt"));
         return token;
+    }
+
+    public void updateAllUserTokensRole(String username, String newRole) {
+        Transaction txn = datastore.newTransaction();
+        try {
+            Query<Entity> query = Query.newEntityQueryBuilder()
+                    .setKind("Token")
+                    .setFilter(StructuredQuery.PropertyFilter.eq("username", username))
+                    .build();
+            QueryResults<Entity> results = txn.run(query);
+            List<Entity> updated = new ArrayList<>();
+            while (results.hasNext()) {
+                updated.add(Entity.newBuilder(results.next()).set("role", newRole).build());
+            }
+            if (!updated.isEmpty()) {
+                txn.put(updated.toArray(new Entity[0]));
+                txn.commit();
+            }
+        } finally {
+            if (txn.isActive()) txn.rollback();
+        }
+    }
+
+    public void removeAllUserTokens(String username) {
+        Query<Entity> query = Query.newEntityQueryBuilder()
+                .setKind("Token")
+                .setFilter(StructuredQuery.PropertyFilter.eq("username", username))
+                .build();
+        QueryResults<Entity> results = datastore.run(query);
+        List<Key> keysToDelete = new ArrayList<>();
+        while (results.hasNext()) {
+            keysToDelete.add(results.next().getKey());
+        }
+        if (!keysToDelete.isEmpty()) {
+            datastore.delete(keysToDelete.toArray(new Key[0]));
+        }
     }
 
     public List<AuthToken> listAllSessions() {
@@ -188,5 +222,9 @@ public class UserDataService {
 
     public void removeToken(String tokenId) {
         if (tokenId != null) datastore.delete(tokenKeyFactory.newKey(tokenId));
+    }
+
+    public void deleteUser(String username) {
+        if (username != null) datastore.delete(userKeyFactory.newKey(username));
     }
 }
