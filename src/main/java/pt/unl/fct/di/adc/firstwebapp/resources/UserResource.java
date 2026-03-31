@@ -313,7 +313,7 @@ public class UserResource {
         }
 
         dao.updatePassword(target.getUsername(), newPwd);
-
+        dao.removeToken(session.getTokenId());
         // MUDANÇA: Não fazemos logout aqui. O utilizador continua com a sua sessão ativa.
         return Response.ok(Result.ok(SuccessMessage.PWD_CHANGED)).build();
     }
