@@ -1,107 +1,90 @@
 const API = "/rest";
 
-// Função genérica para Login e Registo
-async function authAction(path) {
-    const isLogin = path === 'login';
-    const payload = isLogin ? {
-        username: document.getElementById('loginUser').value,
-        password: document.getElementById('loginPwd').value
-    } : {
-        username: document.getElementById('regUser').value,
-        password: document.getElementById('regPwd').value,
-        confirmation: document.getElementById('regConf').value
+// --- LOGIN ---
+async function doLogin() {
+    const user = document.getElementById('loginUser').value;
+    const pass = document.getElementById('loginPwd').value;
+    const msg = document.getElementById('loginMsg');
+
+    const payload = {
+        input: { username: user, password: pass }
     };
 
-    const resp = await fetch(`${API}/${path}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-    });
+    try {
+        const resp = await fetch(`${API}/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        const res = await resp.json();
 
-    const result = await resp.json();
-    const msgField = document.getElementById(isLogin ? 'loginMsg' : 'regMsg');
-
-    if (result.status === "success") {
-        if (isLogin) {
-            // result.data contém o AuthToken (com tokenID, role, etc)
-            sessionStorage.setItem('session', JSON.stringify(result.data));
+        if (res.status === "success") {
+            sessionStorage.setItem('session', JSON.stringify(res.data));
             window.location.href = "dashboard.html";
         } else {
-            msgField.style.color = "green";
-            msgField.innerText = result.data;
+            msg.innerText = "Credenciais inválidas.";
         }
-    } else {
-        msgField.style.color = "red";
-        msgField.innerText = result.data; // Mensagem literal do ErrorCode
+    } catch (e) {
+        msg.innerText = "Erro de conexão com o servidor.";
     }
 }
 
-async function loadDashboard() {
+// --- DASHBOARD ---
+async function initDashboard() {
     const session = JSON.parse(sessionStorage.getItem('session'));
     if (!session) { window.location.href = "index.html"; return; }
 
-    document.getElementById('welcomeText').innerText = `Olá, ${session.username}`;
-    const roleSpan = document.getElementById('userRole');
-    roleSpan.innerText = session.role;
-    roleSpan.className = `badge role-${session.role.toLowerCase()}`;
+    document.getElementById('welcomeText').innerText = session.username;
+    const rb = document.getElementById('userRole');
+    rb.innerText = session.role;
+    rb.className = `badge role-${session.role.toLowerCase()}`;
 
-    // Op3: Show Users
+    loadUsers();
+}
+
+async function loadUsers() {
+    const session = JSON.parse(sessionStorage.getItem('session'));
+
+    // Formato estrito: INPUT antes de TOKEN
+    const body = {
+        input: null,
+        token: session
+    };
+
     const resp = await fetch(`${API}/showusers`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: session, input: null })
+        body: JSON.stringify(body)
     });
 
-    const result = await resp.json();
+    const res = await resp.json();
     const tbody = document.querySelector("#userTable tbody");
     tbody.innerHTML = "";
 
-    if (result.status === "success") {
-        result.data.forEach(user => {
+    if (res.status === "success") {
+        // A tua resposta do showusers devolve uma lista de users
+        res.data.users.forEach(u => {
             const tr = document.createElement("tr");
-
-            // Lógica de botões baseada no Role da Sessão
-            let actions = "";
-            if (session.role === "ADMIN") {
-                actions = `<button class="btn-action btn-delete" onclick="deleteAcc('${user.username}')">Apagar</button>`;
-            } else if (session.role === "BO" && user.role === "USER") {
-                actions = `<button class="btn-action" onclick="changePwd('${user.username}')">Reset Pwd</button>`;
-            } else if (user.username === session.username) {
-                actions = `<button class="btn-action" onclick="changePwd('${user.username}')">Mudar Minha Pwd</button>`;
-            }
-
             tr.innerHTML = `
-                <td>${user.username} ${user.username === session.username ? "<strong>(Eu)</strong>" : ""}</td>
-                <td><span class="badge role-${user.role.toLowerCase()}">${user.role}</span></td>
-                <td>${actions || "--"}</td>
+                <td>${u.username}</td>
+                <td><span class="badge role-${u.role.toLowerCase()}">${u.role}</span></td>
+                <td>--</td>
             `;
             tbody.appendChild(tr);
         });
     }
 }
 
-async function deleteAcc(target) {
-    if (!confirm(`Apagar ${target}?`)) return;
-    const session = JSON.parse(sessionStorage.getItem('session'));
-
-    const resp = await fetch(`${API}/deleteaccount`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: session, input: target })
-    });
-
-    const res = await resp.json();
-    alert(res.data);
-    loadDashboard();
-}
-
+// --- LOGOUT ---
 async function logout() {
     const session = JSON.parse(sessionStorage.getItem('session'));
-    await fetch(`${API}/logout`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ token: session, input: session.username })
-    });
+    if (session) {
+        await fetch(`${API}/logout`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ input: { username: session.username }, token: session })
+        });
+    }
     sessionStorage.clear();
     window.location.href = "index.html";
 }

@@ -2,31 +2,43 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>ADC - Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container">
-    <button class="logout-btn" onclick="logout()">Sair</button>
-    <h2 id="welcomeText">Bem-vindo</h2>
-    <p>Perfil: <span id="userRole" class="badge"></span></p>
+<nav class="navbar">
+    <div class="nav-brand">ADC Application</div>
+    <div class="nav-user">
+        <span id="welcomeText"></span>
+        <span id="userRole" class="badge"></span>
+        <button class="btn-logout" onclick="logout()">Sair</button>
+    </div>
+</nav>
 
-    <h3>Utilizadores Registados</h3>
-    <table id="userTable">
-        <thead>
-        <tr>
-            <th>Utilizador</th>
-            <th>Cargo</th>
-            <th>Ações</th>
-        </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
+<main class="container">
+    <section class="card">
+        <div class="card-header">
+            <h3>Utilizadores do Sistema</h3>
+            <button onclick="loadUsers()" class="btn-sm">Atualizar</button>
+        </div>
+
+        <div class="table-responsive">
+            <table id="userTable">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
 <script src="js/app.js"></script>
-<script>
-    // Carrega os dados assim que a página abre
-    window.onload = loadDashboard;
-</script>
+<script>window.onload = initDashboard;</script>
 </body>
 </html>

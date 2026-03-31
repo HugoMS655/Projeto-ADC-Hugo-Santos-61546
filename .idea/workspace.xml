@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="another push">
+    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="change password now logs out user">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,7 @@
       <workItem from="1774709843192" duration="7939000" />
       <workItem from="1774735196710" duration="636000" />
       <workItem from="1774798782774" duration="26000" />
-      <workItem from="1774987791654" duration="3049000" />
+      <workItem from="1774987791654" duration="3762000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -189,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774735020253</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change password now logs out user">
+      <option name="closed" value="true" />
+      <created>1774991298196</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1774991298196</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +220,8 @@
     <MESSAGE value="second push" />
     <MESSAGE value="added transactions to methods that write data" />
     <MESSAGE value="another push" />
-    <option name="LAST_COMMIT_MESSAGE" value="another push" />
+    <MESSAGE value="change password now logs out user" />
+    <option name="LAST_COMMIT_MESSAGE" value="change password now logs out user" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
