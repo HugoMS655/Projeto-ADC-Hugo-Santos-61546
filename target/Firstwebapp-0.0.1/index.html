@@ -2,26 +2,26 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Acesso ao Sistema</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADC - Login</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="auth-box">
-    <div class="card">
-        <h3>Criar Conta</h3>
-        <input type="text" id="regUser" placeholder="Username">
-        <input type="password" id="regPwd" placeholder="Password">
-        <input type="password" id="regConf" placeholder="Confirmar Password">
-        <button onclick="authAction('createaccount')">Registar</button>
-        <p id="regMsg"></p>
-    </div>
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <h1>Bem-vindo</h1>
+        <p>Faça login para aceder ao dashboard</p>
 
-    <div class="card">
-        <h3>Login</h3>
-        <input type="text" id="loginUser" placeholder="Username">
-        <input type="password" id="loginPwd" placeholder="Password">
-        <button onclick="authAction('login')">Entrar</button>
-        <p id="loginMsg"></p>
+        <div class="form-group">
+            <label for="loginUser">Utilizador</label>
+            <input type="text" id="loginUser" placeholder="ex: admin@email.com">
+
+            <label for="loginPwd">Palavra-passe</label>
+            <input type="password" id="loginPwd" placeholder="••••••••">
+
+            <button id="loginBtn" onclick="doLogin()">Entrar</button>
+        </div>
+        <p id="loginMsg" class="msg"></p>
     </div>
 </div>
 <script src="js/app.js"></script>

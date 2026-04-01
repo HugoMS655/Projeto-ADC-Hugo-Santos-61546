@@ -1,25 +1,41 @@
-body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 20px; }
-.container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+:root {
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --text: #1e293b;
+    --bg: #f1f5f9;
+}
 
-/* Forms */
-.auth-box { display: flex; gap: 40px; justify-content: center; margin-top: 50px; }
-.card { background: white; padding: 25px; border-radius: 8px; width: 320px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-input { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
-button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; transition: 0.3s; }
-button:hover { background-color: #0056b3; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); margin: 0; color: var(--text); }
 
-/* Dashboard Table */
-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
-th { background-color: #f8f9fa; color: #333; }
+/* Centralizar Login */
+.auth-wrapper { display: flex; height: 100vh; align-items: center; justify-content: center; }
+.auth-card { background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 100%; max-width: 400px; }
+.auth-card h1 { margin: 0 0 0.5rem; font-size: 1.5rem; color: var(--primary); }
 
-/* Badges de Roles */
-.badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; text-transform: uppercase; font-weight: bold; }
-.role-admin { background: #ffdada; color: #cc0000; }
-.role-bo { background: #d0e1fd; color: #0044cc; }
-.role-user { background: #d1f7d1; color: #008800; }
+/* Navbar */
+.navbar { background: white; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; }
+.nav-brand { font-weight: bold; font-size: 1.2rem; }
+.nav-user { display: flex; align-items: center; gap: 1rem; }
 
-/* Actions */
-.btn-action { width: auto; padding: 5px 10px; font-size: 12px; margin-right: 5px; }
-.btn-delete { background-color: #dc3545; }
-.logout-btn { background-color: #6c757d; width: auto; float: right; }
+/* Tabelas e Cards */
+.container { padding: 2rem 5%; }
+.card { background: white; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); overflow: hidden; }
+.card-header { padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #f1f5f9; }
+
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 1rem; text-align: left; font-size: 0.85rem; color: #64748b; }
+td { padding: 1rem; border-top: 1px solid #f1f5f9; }
+
+/* Botões e Inputs */
+input { width: 100%; padding: 0.8rem; margin: 0.5rem 0 1.2rem; border: 1px solid #cbd5e1; border-radius: 0.4rem; box-sizing: border-box; }
+button { cursor: pointer; border-radius: 0.4rem; font-weight: 600; transition: 0.2s; }
+#loginBtn { background: var(--primary); color: white; border: none; width: 100%; padding: 0.8rem; }
+.btn-logout { background: #fee2e2; color: var(--danger); border: 1px solid #fecaca; padding: 0.4rem 0.8rem; }
+.btn-sm { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+
+/* Badges */
+.badge { padding: 0.2rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: bold; }
+.role-admin { background: #dcfce7; color: #166534; }
+.role-user { background: #f1f5f9; color: #475569; }
+
+.msg { font-size: 0.9rem; text-align: center; margin-top: 1rem; color: var(--danger); }

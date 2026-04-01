@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="change password now logs out user">
+    <list default="true" id="fd2539b4-d124-4f7a-b7c4-34b3a5efefa6" name="Changes" comment="changes to the front end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Firstwebapp-0.0.1.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Firstwebapp-0.0.1/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,9 @@
     &quot;accountId&quot;: &quot;bbebe984-835f-4508-af28-a9e962bf5917&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -47,26 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Maven.AppEngine Local.executor": "Debug",
-    "Maven.Firstwebapp [clean,package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hugo6/OneDrive/Documents/HUGO/Universidade/ANO4/ADC/EVALUATION/EvaluationADC",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Maven.AppEngine Local.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.Firstwebapp [appengine:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Firstwebapp [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hugo6/OneDrive/Documents/HUGO/Universidade/ANO4/ADC/EVALUATION/EvaluationADC&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hugo6\OneDrive\Documents\HUGO\Universidade\ANO4\ADC\EVALUATION\EvaluationADC\src\main\webapp\js" />
@@ -76,6 +85,7 @@
     <option name="myCommands">
       <command value="mvn clean package" />
       <command value=" mvn appengine:deploy -Dapp.deploy.projectId=adcproject-490617 -Dapp.deploy.version=2" />
+      <command value="mvn appengine:run" />
     </option>
   </component>
   <component name="RunManager">
@@ -86,14 +96,7 @@
           <MavenRunnerSettings>
             <option name="delegateBuildToMaven" value="false" />
             <option name="environmentProperties">
-              <map>
-                <entry key="DATASTORE_DATASET" value="projeto-cvd" />
-                <entry key="DATASTORE_EMULATOR_HOST" value="localhost:8081" />
-                <entry key="DATASTORE_EMULATOR_HOST_PATH" value="localhost:8081/datastore" />
-                <entry key="DATASTORE_HOST" value="http://localhost:8081" />
-                <entry key="DATASTORE_PROJECT_ID" value="projeto-cvd" />
-                <entry key="DATASTORE_USE_PROJECT_ID_AS_APP_ID" value="true" />
-              </map>
+              <map />
             </option>
             <option name="jreName" value="#USE_PROJECT_JDK" />
             <option name="mavenProperties">
@@ -156,7 +159,8 @@
       <workItem from="1774709843192" duration="7939000" />
       <workItem from="1774735196710" duration="636000" />
       <workItem from="1774798782774" duration="26000" />
-      <workItem from="1774987791654" duration="3762000" />
+      <workItem from="1774987791654" duration="11800000" />
+      <workItem from="1774999971905" duration="2189000" />
     </task>
     <task id="LOCAL-00001" summary="first push">
       <option name="closed" value="true" />
@@ -198,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774991298196</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changes to the front end">
+      <option name="closed" value="true" />
+      <created>1774991996475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1774991996475</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +233,8 @@
     <MESSAGE value="added transactions to methods that write data" />
     <MESSAGE value="another push" />
     <MESSAGE value="change password now logs out user" />
-    <option name="LAST_COMMIT_MESSAGE" value="change password now logs out user" />
+    <MESSAGE value="changes to the front end" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes to the front end" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
